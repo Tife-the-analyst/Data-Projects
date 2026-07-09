@@ -1,0 +1,22 @@
+1. Introduction
+The aim of this project is to build a logistic regression model that predicts whether a patient is diabetic or non-diabetic using some medical predictor variables
+2. Dataset Description
+The dataset contains the following variables:
+Pregnancies, Glucose, Blood Pressure, Skin Thickness, Insulin, BMI, Age, Diabetes Pedigree Function
+Outcome (0 = Non-diabetic, 1 = Diabetic)
+3. Data Cleaning
+Zero values in biologically impossible variables (Glucose, Blood Pressure, Skin Thickness, Insulin and BMI) were treated as missing values and replaced using mean imputation to improve data quality.
+4. Train/Test Split
+The dataset was split into 80% training data and 20% testing data to evaluate model performance on unseen data.
+5. Logistic Regression Model
+A logistic regression model was trained using the training dataset to predict diabetes outcome.
+
+QUESTIONS
+1. The strongest pedictors from this model are DiabetesPedigreeFunction, Pregnancies , BMI, Glucose and Age, These variables have the biggest influence on predicting if a patient is diabetic from this sample of data.
+This was determined by their regression coefficient. A larger coefficient indicates a stronger effect on the likelihood of diabetes.
+
+2. In this dataset, there are more non-diabetic cases, which creates a class imbalance that affects the classification of the logistic regression model.
+As a result of one class being the majority, the model may be biased towards the majority class which in this case is non diabetic.
+To address the inherent class imbalance in the dataset—where non-diabetic cases significantly outnumber diabetic cases the classification threshold was adjusted from the default 0.5 to 0.4.
+By lowering this threshold, the model becomes more sensitive to the diabetic cases ensuring at-risk patients are flagged earlier.
+
