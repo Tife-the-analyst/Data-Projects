@@ -1,0 +1,10 @@
+Question
+
+How do you determine the optimal number of clusters?
+The optimal number of clusters was determined using the Elbow Method. 
+K-means clustering was run for multiple values of K (1–10), 
+and the Within Cluster Sum of Squares (WCSS) was plotted against
+the number of clusters. 
+The optimal K is chosen at the point where the graph forms an “elbow”,
+indicating that increasing the number of clusters
+no longer significantly improves clustering performance.
